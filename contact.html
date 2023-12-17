@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" type="text/css" href="fichier3.css">
-  <table border="1" width=100%>
-    <h1>CONTACT ME</h1>
-  </table>
+  <script>
+    function validateForm() {
+      var cin = document.getElementById("cin").value;
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var message = document.getElementById("message").value;
+
+      if (!/^\d{1,8}$/.test(cin)) {
+        alert("CIN must be a numeric value with a maximum of 8 digits.");
+        return false;
+      }
+
+      if (/\d/.test(firstName) || /\d/.test(lastName)) {
+        alert("Name fields should not contain numeric characters.");
+        return false;
+      }
+
+      if (message.trim() === "") {
+        alert("Please enter a message.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </head>
 <body>
   <table border="2" width=100%>
@@ -18,6 +40,23 @@
       <td><a href="mailto:mouheb.hidouri@esprit.tn"><u>EMAIL</u></a></td>
     </tr>
   </table>
+  
+  <form id="myContactForm" onsubmit="return validateForm()">
+    <label for="cin">CIN: <span>(less than 8 Numercial digits)</span></label>
+    <input type="text" id="cin" name="cin" maxlength="8" required>
+
+    <label for="firstName">First Name: <span>(Only alphabets)</span></label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name: <span>(Only alphabets)</span></label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="message">Message: <span>(Cannot be empty)</span></label>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
   <footer>
     <h3 align="right"><a href="index.html">HOME PAGE</a></h3>
   </footer>

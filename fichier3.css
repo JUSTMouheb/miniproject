@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -48,3 +49,55 @@ footer {
   margin-top: 20px;
   text-align: right;
 }
+=======
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 2px solid #333;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+label span {
+  color: red;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: right;
+}
+>>>>>>> 719d9db20467397c61ff5a2fde72649c677d9650
